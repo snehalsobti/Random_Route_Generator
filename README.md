@@ -25,6 +25,8 @@ This section lists the features and functionalities that this map software offer
 
 ### Creative Icons and Filtering for POIs (Points Of Interest)
 The GIS makes use of creative and eye-catching icons to represent different landmarks such as _bus_ for bus stations, _book_ for libraries, _plus_ symbol for hospitals, _coffee cup_ for cafe and restaurants, and so on.... This allows the user to distinctively see one or more of the locations that they wish to visit. Moreover, the map also provides an option to specifically pick and display only one type of landmarks (such as selecting only the hospitals). (Video here)   
+
+   
 POI filtering helps in reducing the chaos of icons and details on the map's interface. This in turn, helps increase the responsiveness of the map. The map loads faster while zoomed in --> around 400 milliseconds faster for Toronto when one POI type is selected vs drawing all the POIs. (Screenshot here --> Graph for responsiveness)
 
 ### Clicking anywhere on the map
@@ -38,6 +40,8 @@ Night Mode has been added to the map software after doing an ample amount of res
 
 ### Random Route Generator
 The user needs to select an intersection and input the distance (in metres) that they want to travel. The random route generator generates a random route each time the _Find Random Route_ button is pressed. Again, the map takes care of automatic zooming into and focusing on the enlarged view of the random route. (Video here)   
+
+   
 This feature fulfills the main purpose of this software which is to eradicate the boredom of the same usual routes. And in terms of responsiveness, the random route generation happens within milliseconds.
 
 ### Getting Directions
@@ -50,6 +54,8 @@ In addition to this, the GIS provides detailed explanation of the exact route fr
 
 ### Dynamic Zooming and Progressive Loading
 Dynamic Zooming means showing optimum details on different zooming levels. It involves the implementation of progressive loading of different features on the map with increasing zooming-in levels. For example, when the map is at normal zoom level, only the highways and major streets of the city are displayed but with zooming in, there is a progressive loading of rest of the primary, secondary, residential and small streets. Similarly, not all the water bodies, green spaces, buildings and intersections are shown at normal zoom level. As the user zooms in, more and more features on the map get unfolded. Moreover, the street names, streets' one-way or two-way status and the landmark names are only shown when the map is sufficiently zoomed in. Not only this, but the map also avoids drawing all those landmarks and intersections which are out of the visible area of the screen. (Video here)     
+
+    
 Dynamic Zooming enables the map to zoom in a lot faster compared to the scenario when map would have needed to display all the features at once. This is because the map needs to call a 'drawMap()' function each time the map is zoomed-in or zoomed-out. So, when there is omission of millions of buildings, landmarks, and much more features, the map loads in a much efficient way. (Screenshot here --> Graph for responsiveness)
 
 
