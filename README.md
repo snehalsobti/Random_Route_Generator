@@ -44,7 +44,8 @@ This feature fulfills the main purpose of this software which is to eradicate th
 The map software allows the user to get directions in two ways:
 * Enter two street names for the starting intersection and two street names for the destination, or
 * Click at two locations on the map and locations closest to the mouse clicks get marked as the start and end locations.
-On selecting two intersections, the GIS suggests and marks the shortest route between the start and end locations. For this purpose, I have implemented A* Algorithm to make the process of finding the shortest path faster i.e more responsive. The map does the automatic zooming in and also, marks the start and end locations with appropriate icons.    
+On selecting two intersections, the GIS suggests and marks the shortest route between the start and end locations. For this purpose, I have implemented A* Algorithm to make the process of finding the shortest path faster i.e more responsive. The map does the automatic zooming in and also, marks the start and end locations with appropriate icons.
+
 In addition to this, the GIS provides detailed explanation of the exact route from start location to the end location. The algorithm at the back end takes care of minute details such as _sharp_ or _non-sharp_ turns or if the turn is not too significant, it is mentioned as _keeping straight_ by the software. (Video here)
 
 ### Dynamic Zooming and Progressive Loading
