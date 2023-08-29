@@ -1,5 +1,5 @@
 # RandomRouteGenerator
-A Geographic Information System (GIS) - a map software that was developed in C++ along with a team of two others. This software employs the OpenStreetMap database and offers a wide array of features. Among its capabilities are determining the shortest route between two points, providing step-by-step directions for the entire journey, and more. These functionalities were made possible by developing custom algorithms inspired by the Dijkstra and A* algorithms.   
+A Geographic Information System (GIS) - a map software that was developed in C++ along with a team of two others. This software employs the OpenStreetMap database and offers a wide array of features. Among its capabilities are determining the shortest route between two points, providing step-by-step directions for the entire journey, and more. These functionalities were made possible by developing some custom algorithms and some standard algorithms including the Dijkstra and A* algorithms.   
 
 True to its name, its primary purpose is to generate random routes based on a specified starting point and desired travel distance. This application is a fully operational software complete with a functional Graphical User Interface (GUI) that is built using the EZGL and GTK libraries. (screenshot here)
 
