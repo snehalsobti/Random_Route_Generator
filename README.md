@@ -5,7 +5,7 @@ True to its name, its primary purpose is to generate random routes based on a sp
 
 ___NOTE --> I will be using the terms "map software" and "GIS" interchangeably throughout this README___
 
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/21a876cc-18cf-4da7-ab8b-b5d1022be8e2">
+<img src="media/Mapper_General.png" width="700">
 
 ## Disclaimer
 This repository explains the functionalities of this GIS software that I developed during a Software Design and Communication course in my second year of Computer Engineering at the University of Toronto. The README file also includes screenshots and videos that illustrate the functionalities of the map. As this project is part of an academic course at the University of Toronto, I cannot publicly share the actual code for the GIS software to prevent students from committing Academic Integrity violations by copying it.   
@@ -29,19 +29,18 @@ This section lists the features and functionalities that this map software offer
 ### Creative Icons and Filtering for POIs (Points Of Interest)
 The GIS makes use of creative and eye-catching icons to represent different landmarks such as _bus_ for bus stations, _book_ for libraries, _plus_ symbol for hospitals, _coffee cup_ for cafe and restaurants, and so on.... This allows the user to distinctively see one or more of the locations that they wish to visit. Moreover, the map also provides an option to specifically pick and display only one type of landmarks (such as selecting only the hospitals).
 
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/654a3e2a-f51d-4053-af0b-c7c822c118d5">
+<img src="media/POI.png" width="700">
    
 POI filtering helps in reducing the chaos of icons and details on the map's interface. This in turn, helps increase the responsiveness of the map. The map loads faster while zoomed in --> around 400 milliseconds faster for Toronto when one POI type is selected vs drawing all the POIs.  
 
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/caf4a582-8c71-4cb1-8c74-e416e532a931">
+<img src="media/POIperformance.png" width="700">
 
 
 ### Clicking anywhere on the map
 The user can click the mouse on a specific location on the map and the intersection closest to the mouse click will be highlighted. It automatically zooms into the enlarged view of the neighbourhood near the mouse click. Moreover, it shows a popup message displaying the name of the closest intersection and the closest landmark. For example, if the user wants to visit a cafe near a desired location, they can select _cafe_ in the POI filter and click on the specific location on the map to get the desired information. 
 
 <img src="media/POI.gif" width="700">
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/e0bfa971-6eaf-4992-9140-68433d34d21f">
-
+<img src="media/ClickAnywhere.png" width="700">
 
 ### Searching for an intersection
 The user can enter two street names and if those two streets intersect somewhere, that intersection gets highlighted. Again, the GIS supports automatic zooming in - which means that the map automatically gets zoomed in to the enlarged view of the neighbourhood near the intersection. Furthermore, if the two streets do not intersect anywhere in the entire city, the map warns the user with a small message.
@@ -75,13 +74,13 @@ Dynamic Zooming means showing optimum details on different zooming levels. It in
     
 Dynamic Zooming enables the map to zoom in a lot faster compared to the scenario when map would have needed to display all the features at once. This is because the map needs to call a 'drawMap()' function each time the map is zoomed-in or zoomed-out. So, when there is omission of millions of buildings, landmarks, and much more features, the map loads in a much efficient way.
 
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/4f7ab7ed-5cb9-42d4-8001-fb41f4a8cfcd">
+<img src="media/DynamicZoomingPerformance" width="700">
 
 ## Responsiveness of Shortest Path Finding Algorithm
 The following snapshots illustrate the time being taken for the map software to respond when provided with the task of finding the shortest path between two destinations which are on the extreme corners of the big cities.
 
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/487ae0f5-cf84-4c03-b4c9-4b019bcc438d">
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/fb0b4dc1-ae8c-4f9e-b317-e6594cb6c02c">
+<img src="media/ShortestPathPerformance1" width="700">
+<img src="media/ShortestPathPerformance2" width="700">
 
 ## Enhanced Random Route Finding Algorithm   
 As an add-on to the existing software's capabilities, we had also proposed an enhanced random route finding algorithm which allows the user to input start and end locations and also various stops/landmarks in between the two locations. Following is the pseudocode that is used in the algorithm for finding a random route when a user provides the start location and end location, and also provides the time they wish to walk for. If the time is less than the shortest path between the two locations, this algorithm will generate the shortest path.
@@ -101,4 +100,4 @@ _Note - for shortest path finding – A* Algorithm is used_
 
 In this enhanced random route-finding algorithm, the map software also allows the user to input various kinds of stops/landmarks that they wish to visit on their journey. For example, the user wishes to visit a cafe (Stop 1) and a lake (Stop 2) in their journey. Then, basically, the algorithm whose pseudocode has been explained above, will be used three times --> once for start location and Stop 1, Stop 1 and Stop 2 and then, Stop 2 and end location. I also used the concept of ratios for distributing the time for all the paths proportionately. The following diagram tries to illustrate an example of two stops input by the user and when the user wants to walk for 90 minutes. So, we calculate the shortest path times for all the paths (there are three --> Start to Stop 1, Stop 1 to Stop 2 and Stop 2 to End) which comes out to be in the ratio 2:1:3. So, the algorithm will divide the 90 minutes (that the user has input) in the ratio of 2:1:3 and accordingly, will generate three random paths of times 30, 15 and 45 minutes which when combined, gives a single random route of 90 minutes.   
 
-<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/41a9ca39-9c38-4e23-a0f1-64d184834e9d">
+<img src="media/Algorithm.png" width="700">
