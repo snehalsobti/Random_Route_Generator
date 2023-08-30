@@ -1,9 +1,11 @@
 # RandomRouteGenerator
 A Geographic Information System (GIS) - a map software that was developed in C++ along with a team of two others. This software employs the OpenStreetMap database and offers a wide array of features. Among its capabilities are determining the shortest route between two points, providing step-by-step directions for the entire journey, and more. These functionalities were made possible by developing some custom algorithms and some standard algorithms including the Dijkstra and A* algorithms.   
 
-True to its name, its primary purpose is to generate random routes based on a specified starting point and desired travel distance. This application is a fully operational software complete with a functional Graphical User Interface (GUI) that is built using the EZGL and GTK libraries. (screenshot here)
+True to its name, its primary purpose is to generate random routes based on a specified starting point and desired travel distance. This application is a fully operational software complete with a functional Graphical User Interface (GUI) that is built using the EZGL and GTK libraries.  
 
-___I will be using the terms "map software" and "GIS" interchangeably throughout this README___
+___NOTE --> I will be using the terms "map software" and "GIS" interchangeably throughout this README___
+
+<img width="763" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/21a876cc-18cf-4da7-ab8b-b5d1022be8e2">
 
 ## Disclaimer
 This repository explains the functionalities of this GIS software that I developed during a Software Design and Communication course in my second year of Computer Engineering at the University of Toronto. The README file also includes screenshots and videos that illustrate the functionalities of the map. As this project is part of an academic course at the University of Toronto, I cannot publicly share the actual code for the GIS software to prevent students from committing Academic Integrity violations by copying it.   
@@ -17,17 +19,21 @@ We chose the idea of "Random Routes" for our GIS project to make things more int
 This section lists the features and functionalities that this map software offers. Moreover, it also emphasizes on how these features improve the usability and the responsiveness of the map.
 
 ### Basic functionality buttons
-(Screenshot here)
-* The user can use the mouse or the zoom-in, zoom-out, zoom-fit and four arrow buttons for the zooming and panning functionalities. (screenshot here)
-* It also allows the user to change the city. The user can select from a list of around 20 cities to open the map for.
+* The user can use the zoom-in, zoom-out, zoom-fit and four arrow buttons for the zooming and panning functionalities.
+* There is a functionality for the user to change the city. The user can select from a list of around 20 cities to open the map for.
 * A _Help_ button shows detailed instructions on how to use the map software effectively.
 * There is also a _Reset Highlights_ button which clears all the highlighted streets and intersections on the map.
+
+![](Basic_Functionalities.wmv)
 
 ### Creative Icons and Filtering for POIs (Points Of Interest)
 The GIS makes use of creative and eye-catching icons to represent different landmarks such as _bus_ for bus stations, _book_ for libraries, _plus_ symbol for hospitals, _coffee cup_ for cafe and restaurants, and so on.... This allows the user to distinctively see one or more of the locations that they wish to visit. Moreover, the map also provides an option to specifically pick and display only one type of landmarks (such as selecting only the hospitals). (Video here)   
 
    
-POI filtering helps in reducing the chaos of icons and details on the map's interface. This in turn, helps increase the responsiveness of the map. The map loads faster while zoomed in --> around 400 milliseconds faster for Toronto when one POI type is selected vs drawing all the POIs. (Screenshot here --> Graph for responsiveness)
+POI filtering helps in reducing the chaos of icons and details on the map's interface. This in turn, helps increase the responsiveness of the map. The map loads faster while zoomed in --> around 400 milliseconds faster for Toronto when one POI type is selected vs drawing all the POIs.  
+
+<img width="480" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/caf4a582-8c71-4cb1-8c74-e416e532a931">
+
 
 ### Clicking anywhere on the map
 The user can click the mouse on a specific location on the map and the intersection closest to the mouse click will be highlighted. It automatically zooms into the enlarged view of the neighbourhood near the mouse click. Moreover, it shows a popup message displaying the name of the closest intersection and the closest landmark. For example, if the user wants to visit a cafe near a desired location, they can select _cafe_ in the POI filter and click on the specific location on the map to get the desired information. (Video here)
