@@ -24,8 +24,6 @@ This section lists the features and functionalities that this map software offer
 * A _Help_ button shows detailed instructions on how to use the map software effectively.
 * There is also a _Reset Highlights_ button which clears all the highlighted streets and intersections on the map.
 
-![](Basic_Functionalities.wmv)
-
 ### Creative Icons and Filtering for POIs (Points Of Interest)
 The GIS makes use of creative and eye-catching icons to represent different landmarks such as _bus_ for bus stations, _book_ for libraries, _plus_ symbol for hospitals, _coffee cup_ for cafe and restaurants, and so on.... This allows the user to distinctively see one or more of the locations that they wish to visit. Moreover, the map also provides an option to specifically pick and display only one type of landmarks (such as selecting only the hospitals). (Video here)   
 
