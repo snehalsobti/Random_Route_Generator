@@ -74,13 +74,13 @@ Dynamic Zooming means showing optimum details on different zooming levels. It in
     
 Dynamic Zooming enables the map to zoom in a lot faster compared to the scenario when map would have needed to display all the features at once. This is because the map needs to call a 'drawMap()' function each time the map is zoomed-in or zoomed-out. So, when there is omission of millions of buildings, landmarks, and much more features, the map loads in a much efficient way.
 
-<img src="media/DynamicZoomingPerformance" width="700">
+<img src="media/DynamicZoomingPerformance.png" width="700">
 
 ## Responsiveness of Shortest Path Finding Algorithm
 The following snapshots illustrate the time being taken for the map software to respond when provided with the task of finding the shortest path between two destinations which are on the extreme corners of the big cities.
 
-<img src="media/ShortestPathPerformance1" width="700">
-<img src="media/ShortestPathPerformance2" width="700">
+<img src="media/ShortestPathPerformance1.png" width="700">
+<img src="media/ShortestPathPerformance2.png" width="700">
 
 ## Enhanced Random Route Finding Algorithm   
 As an add-on to the existing software's capabilities, we had also proposed an enhanced random route finding algorithm which allows the user to input start and end locations and also various stops/landmarks in between the two locations. Following is the pseudocode that is used in the algorithm for finding a random route when a user provides the start location and end location, and also provides the time they wish to walk for. If the time is less than the shortest path between the two locations, this algorithm will generate the shortest path.
