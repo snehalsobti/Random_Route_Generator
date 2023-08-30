@@ -56,7 +56,31 @@ In addition to this, the GIS provides detailed explanation of the exact route fr
 Dynamic Zooming means showing optimum details on different zooming levels. It involves the implementation of progressive loading of different features on the map with increasing zooming-in levels. For example, when the map is at normal zoom level, only the highways and major streets of the city are displayed but with zooming in, there is a progressive loading of rest of the primary, secondary, residential and small streets. Similarly, not all the water bodies, green spaces, buildings and intersections are shown at normal zoom level. As the user zooms in, more and more features on the map get unfolded. Moreover, the street names, streets' one-way or two-way status and the landmark names are only shown when the map is sufficiently zoomed in. Not only this, but the map also avoids drawing all those landmarks and intersections which are out of the visible area of the screen. (Video here)     
 
     
-Dynamic Zooming enables the map to zoom in a lot faster compared to the scenario when map would have needed to display all the features at once. This is because the map needs to call a 'drawMap()' function each time the map is zoomed-in or zoomed-out. So, when there is omission of millions of buildings, landmarks, and much more features, the map loads in a much efficient way. (Screenshot here --> Graph for responsiveness)
+Dynamic Zooming enables the map to zoom in a lot faster compared to the scenario when map would have needed to display all the features at once. This is because the map needs to call a 'drawMap()' function each time the map is zoomed-in or zoomed-out. So, when there is omission of millions of buildings, landmarks, and much more features, the map loads in a much efficient way. (Screenshot here --> Graph for responsiveness)   
+
+## Responsiveness of Shortest Path Finding Algorithm
+The following snapshots illustrate the time being taken for the map software to respond when provided with the task of finding the shortest path between two destinations which are on the extreme corners of the big cities. (Screenshot here --> Pics from ppt)  
+
+
+
+## Enhanced Random Route Finding Algorithm   
+As an add-on to the existing software's capabilities, we had also proposed an enhanced random route finding algorithm which allows the user to input start and end locations and also various stops/landmarks in between the two locations. Following is the pseudocode that is used in the algorithm for finding a random route when a user provides the start location and end location, and also provides the time they wish to walk for. If the time is less than the shortest path between the two locations, this algorithm will generate the shortest path.
+```
+time_left = time input by user
+shortest_path_time = shortest path time between start and end location   
+while (shortest_path_time <= time_left)   
+{   
+	find a random route of some small distance (say, 100 metres)
+	time_left = time input by user - time taken for the above calculated random route
+	shortest_path_time = shortest path time from current location to destination
+}
+go on the shortest path from current location to destination
+```
+_Note - for user_speed - typical human walk speed is considered_
+_Note - for shortest path finding – A* Algorithm is used_
+
+In this enhanced random route-finding algorithm, the map software also allows the user to input various kinds of stops/landmarks that they wish to visit on their journey. For example, the user wishes to visit a cafe (Stop 1) and a lake (Stop 2) in their journey. Then, basically, the algorithm whose pseudocode has been explained above, will be used three times --> once for start location and Stop 1, Stop 1 and Stop 2 and then, Stop 2 and end location. I also used the concept of ratios for distributing the time for all the paths proportionately. The following diagram tries to illustrate an example of two stops input by the user and when the user wants to walk for 90 minutes. So, we calculate the shortest path times for all the paths (there are three --> Start to Stop 1, Stop 1 to Stop 2 and Stop 2 to End) which comes out to be in the ratio 2:1:3. So, the algorithm will divide the 90 minutes (that the user has input) in the ratio of 2:1:3 and accordingly, will generate three random paths of times 30, 15 and 45 minutes which when combined, gives a single random route of 90 minutes. (Screenshot here --> Diagram from ppt)   
+
 
 
 ___What is left to discuss --> Enhanced Random Route Generation, M4 and M3 algorithms, Multi-threading, and adding videos and screenshots___
