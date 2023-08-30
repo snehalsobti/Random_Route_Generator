@@ -5,7 +5,7 @@ True to its name, its primary purpose is to generate random routes based on a sp
 
 ___NOTE --> I will be using the terms "map software" and "GIS" interchangeably throughout this README___
 
-<img width="763" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/21a876cc-18cf-4da7-ab8b-b5d1022be8e2">
+<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/21a876cc-18cf-4da7-ab8b-b5d1022be8e2">
 
 ## Disclaimer
 This repository explains the functionalities of this GIS software that I developed during a Software Design and Communication course in my second year of Computer Engineering at the University of Toronto. The README file also includes screenshots and videos that illustrate the functionalities of the map. As this project is part of an academic course at the University of Toronto, I cannot publicly share the actual code for the GIS software to prevent students from committing Academic Integrity violations by copying it.   
@@ -24,13 +24,17 @@ This section lists the features and functionalities that this map software offer
 * A _Help_ button shows detailed instructions on how to use the map software effectively.
 * There is also a _Reset Highlights_ button which clears all the highlighted streets and intersections on the map.
 
+<img src="media/Basic_Functionalities.gif" width="700">
+
 ### Creative Icons and Filtering for POIs (Points Of Interest)
-The GIS makes use of creative and eye-catching icons to represent different landmarks such as _bus_ for bus stations, _book_ for libraries, _plus_ symbol for hospitals, _coffee cup_ for cafe and restaurants, and so on.... This allows the user to distinctively see one or more of the locations that they wish to visit. Moreover, the map also provides an option to specifically pick and display only one type of landmarks (such as selecting only the hospitals). (Video here)   
+The GIS makes use of creative and eye-catching icons to represent different landmarks such as _bus_ for bus stations, _book_ for libraries, _plus_ symbol for hospitals, _coffee cup_ for cafe and restaurants, and so on.... This allows the user to distinctively see one or more of the locations that they wish to visit. Moreover, the map also provides an option to specifically pick and display only one type of landmarks (such as selecting only the hospitals).
+
+<img width="700" alt="POI" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/67546876-1195-44fe-98ec-87ab8d633f31">
 
    
 POI filtering helps in reducing the chaos of icons and details on the map's interface. This in turn, helps increase the responsiveness of the map. The map loads faster while zoomed in --> around 400 milliseconds faster for Toronto when one POI type is selected vs drawing all the POIs.  
 
-<img width="480" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/caf4a582-8c71-4cb1-8c74-e416e532a931">
+<img width="700" alt="image" src="https://github.com/snehalsobti/RandomRouteGenerator/assets/106326726/caf4a582-8c71-4cb1-8c74-e416e532a931">
 
 
 ### Clicking anywhere on the map
